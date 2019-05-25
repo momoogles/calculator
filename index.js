@@ -143,7 +143,8 @@ function display_allclear() {
 
 function decimal_flag_change() {
     if(decimal_flag === 0) {
+        calculate_flag = 1;
         decimal_flag = 1;
-            document.getElementById("num_display").textContent += ".";
+        document.getElementById("num_display").textContent += ".";
     }
 }
