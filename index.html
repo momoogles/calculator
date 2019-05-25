@@ -6,46 +6,60 @@
     <title>WEB電卓</title>
     <link rel="stylesheet" href="css/config.css">
     <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho|Ultra&display=swap" rel="stylesheet">
 </head>
 <body id = "index">
-    <main>
+    <header>
         <h1>WEB電卓</h1>
-        <p>〜桁までの計算は行えます。</p>
-        <div class = "content-area">
-            <div class = "display-area">
-            </div>
-            <div class = "click-area">
-                <div class = "operator">
-                    <div class = "btn">+</div>
-                    <div class = "btn">-</div>
-                    <div class = "btn">×</div>
-                    <div class = "btn">÷</div>
+    </header>
+    <main>
+        <div class = main-content>
+            <div class = "content-area">
+                <div class = "display-area">
+                    <div id = "num_display">0</div>
+                    <div id = "howcal_display"></div>
                 </div>
-                <div class = "operator">
-                    <div class = "1-row">
-                        <div class = "btn">7</div>
-                        <div class = "btn">8</div>
-                        <div class = "btn">9</div>
+                <div class = "click-area">
+                    <div class = "operator">
+                        <div class = "btn" onclick = "howcalculate(1)">+</div>
+                        <div class = "btn" onclick = "howcalculate(2)">-</div>
+                        <div class = "btn" onclick = "howcalculate(3)">×</div>
+                        <div class = "btn" onclick = "howcalculate(4)">÷</div>
+                        <div class = "btn" onclick = "display_allclear()">AC</div>
                     </div>
-                    <div class = "2-row">
-                        <div class = "btn">4</div>
-                        <div class = "btn">5</div>
-                        <div class = "btn">6</div>
-                    </div>
-                    <div class = "3-row">
-                        <div class = "btn">1</div>
-                        <div class = "btn">2</div>
-                        <div class = "btn">3</div>
-                    </div>
-                    <div class = "4-row">
-                        <div class = "btn">0</div>
-                        <div class = "btn">C</div>
-                        <div class = "btn">AC</div>
+                    <div class = "operator">
+                        <div class = "row1">
+                            <div class = "btn" onclick = "calculate(7)">7</div>
+                            <div class = "btn" onclick = "calculate(8)">8</div>
+                            <div class = "btn" onclick = "calculate(9)">9</div>
+                        </div>
+                        <div class = "row2">
+                            <div class = "btn" onclick = "calculate(4)">4</div>
+                            <div class = "btn" onclick = "calculate(5)">5</div>
+                            <div class = "btn" onclick = "calculate(6)">6</div>
+                        </div>
+                        <div class = "row3">
+                            <div class = "btn" onclick = "calculate(1)">1</div>
+                            <div class = "btn" onclick = "calculate(2)">2</div>
+                            <div class = "btn" onclick = "calculate(3)">3</div>
+                        </div>
+                        <div class = "row4">
+                            <div class = "btn" onclick = "calculate(0)">0</div>
+                            <div class = "btn" onclick = "decimal_flag_change()">.</div>
+                            <div class = "btn" onclick = "display_clear()">C</div>
+                            
+                        </div>
+                        <div class = "row5">
+                        <div class = "btn" onclick = "howcalculate(5)">=</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <script type = "text/javascript" src = ""></script>
+    <footer>
+        <small>(c) 2019 momoogles.</small>
+    </footer>
+    <script type = "text/javascript" src = "index.js"></script>    
 </body>
 </html>
