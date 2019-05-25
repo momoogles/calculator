@@ -81,8 +81,9 @@ function howcalculate(num) {
         // 計算結果が整数か判定する！
         } else {
             for(let cnt = 1; cnt < 11; cnt++) {
-                if(Math.round(answer) * (10 ** cnt) === answer * (10 ** cnt)) {
+                if(Math.round(answer * (10 ** cnt)) === answer * (10 ** cnt)) {
                     decimal_digit = 10 ** cnt;
+                    decimal_flag = 1;
                     break;
                 }
             }
